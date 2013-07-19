@@ -1,0 +1,8 @@
+[Unit]
+Description = SANE remote scanner access
+Requires = saned.socket
+
+[Service]
+ExecStart=/usr/sbin/saned
+StandardInput = socket
+

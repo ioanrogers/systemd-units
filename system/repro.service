@@ -1,0 +1,10 @@
+[Unit]
+Description = SIP proxy server
+After = ifup@sit0.service
+
+[Service]
+ExecStart = /usr/sbin/repro
+
+[Install]
+WantedBy = multi-user.target
+

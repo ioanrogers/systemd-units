@@ -1,0 +1,11 @@
+[Unit]
+Description = MySQL RDBMS server
+
+[Service]
+ExecStart = /usr/sbin/mysqld --console
+User = mysql
+Group = mysql
+
+[Install]
+WantedBy = multi-user.target
+

@@ -1,0 +1,12 @@
+[Unit]
+Description=High performance and lighweight web server
+
+[Service]
+ExecStart=/usr/sbin/nginx
+ExecReload=/usr/sbin/nginx -s reload
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy = multi-user.target
+

@@ -1,0 +1,9 @@
+[Unit]
+Description = Samba daemons to support Windows
+
+[Service]
+ExecStart = /usr/sbin/smbd -F -S -D
+
+[Install]
+WantedBy = multi-user.target
+

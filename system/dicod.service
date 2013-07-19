@@ -1,0 +1,10 @@
+[Unit]
+Description = Dictionary Server
+
+[Service]
+ExecStart  = /usr/bin/dicod -f --stderr
+User = dicod
+Group = dicod
+
+[Install]
+WantedBy = multi-user.target

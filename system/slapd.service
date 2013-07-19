@@ -1,0 +1,12 @@
+[Unit]
+Description = LDAP server 
+
+[Service]
+; -d0 stops slapd from forking
+ExecStart = /usr/sbin/slapd -6 -u openldap -g openldap -h "ldap://[::1] ldap://[2001:470:b:a97::1] ldapi:///" -d0
+Restart = always
+RestartSec = 180
+
+[Install]
+WantedBy = multi-user.target
+

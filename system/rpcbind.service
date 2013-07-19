@@ -1,0 +1,10 @@
+[Unit]
+Description = RPC service
+Requires = var-lib-nfs-rpc_pipefs.mount proc-fs-nfsd.mount
+
+[Service]
+ExecStart = /sbin/rpcbind -w -d -h ::1
+
+[Install]
+WantedBy = multi-user.target
+

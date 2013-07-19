@@ -1,0 +1,10 @@
+[Unit]
+Description = idmapper for NFS
+After = rpcbind.service 
+
+[Service]
+ExecStart = /usr/sbin/rpc.idmapd -f -vvv
+
+[Install]
+WantedBy = multi-user.target
+

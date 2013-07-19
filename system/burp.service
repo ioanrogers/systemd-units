@@ -1,0 +1,10 @@
+[Unit]
+Description = Backup server
+After = local-fs.target
+
+[Service]
+ExecStart = /usr/sbin/burp -c /etc/burp/burp-server.conf -F
+
+[Install]
+WantedBy = multi-user.target
+

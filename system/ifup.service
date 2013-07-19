@@ -1,0 +1,10 @@
+[Unit]
+Description = ifup
+After = local-fs.target
+
+[Service]
+ExecStart = /sbin/ifup -a
+ExecStop = /sbin/ifdown -a
+
+[Install]
+WantedBy = multi-user.target

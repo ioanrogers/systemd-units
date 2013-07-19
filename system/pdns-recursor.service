@@ -1,0 +1,11 @@
+[Unit]
+Description = PowerDNS recursor
+
+[Service]
+ExecStart  = /usr/sbin/pdns_recursor 
+ExecReload = /bin/kill -HUP $MAINPID
+Restart    = always
+RestartSec = 180
+
+[Install]
+WantedBy = multi-user.target

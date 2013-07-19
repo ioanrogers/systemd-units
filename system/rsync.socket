@@ -1,0 +1,13 @@
+[Unit]
+Description = Listen for rsync connections
+
+[Socket]
+#ListenStream = [2001:470:b:a97::1]:873
+BindIPv6Only = ipv6-only
+ListenStream = 873
+BindToDevice = eth0
+Accept = true
+
+[Install]
+WantedBy = sockets.target
+

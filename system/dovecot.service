@@ -1,0 +1,12 @@
+[Unit]
+Description = Mail server
+
+[Service]
+ExecStart  = /usr/sbin/dovecot -F -c /etc/dovecot/dovecot.conf
+ExecReload = /usr/sbin/dovecot reload
+ExecStop   = /usr/sbin/dovecot stop
+Restart    = always
+RestartSec = 120
+
+[Install]
+WantedBy = multi-user.target

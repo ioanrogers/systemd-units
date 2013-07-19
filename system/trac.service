@@ -1,0 +1,12 @@
+[Unit]
+Description = Software Project Manager
+
+[Service]
+ExecStart = /usr/bin/tracd --protocol fcgi -s /srv/www/trac
+User = www-data
+Group = www-data
+StandardOutput = syslog
+
+[Install]
+WantedBy = multi-user.target
+

@@ -1,0 +1,10 @@
+[Unit]
+Description = VoIP server
+
+[Service]
+ExecStart  = /usr/bin/yate -vv
+Restart    = always
+RestartSec = 180
+
+[Install]
+WantedBy = multi-user.target

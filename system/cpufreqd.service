@@ -1,0 +1,9 @@
+[Unit]
+Description = Userspace control of CPU power management
+
+[Service]
+ExecStart = /usr/sbin/cpufreqd -D
+
+[Install]
+WantedBy = multi-user.target
+

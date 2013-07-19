@@ -1,0 +1,10 @@
+[Unit]
+Description = Caching APT proxy
+Requires = apt-cacher.socket
+
+[Service]
+ExecStart = /usr/sbin/apt-cacher -i
+StandardInput = socket
+User = www-data
+Group = www-data
+

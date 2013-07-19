@@ -1,0 +1,11 @@
+[Unit]
+Description = Listen for SANE connections for remote scanner access
+
+[Socket]
+ListenStream = [2001:470:b:a97::1]:6566
+Accept = true
+BindToDevice = eth0
+
+[Install]
+WantedBy = sockets.target
+

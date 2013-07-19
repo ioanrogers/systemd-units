@@ -1,0 +1,10 @@
+[Unit]
+Description = Samba daemons to support Windows
+Requires = samba.service
+
+[Service]
+ExecStart = /usr/sbin/nmbd -F -S -D
+
+[Install]
+WantedBy = multi-user.target
+

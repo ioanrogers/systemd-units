@@ -1,0 +1,13 @@
+[Unit]
+Description = AntiSPAM software
+
+[Service]
+ExecStart  = /usr/bin/dspam --daemon --nofork
+User       = dspam
+Group      = dspam
+Restart    = always
+RestartSec = 180
+
+[Install]
+WantedBy = multi-user.target
+

@@ -1,0 +1,9 @@
+[Unit]
+Description = DHCP server
+
+[Service]
+ExecStart = /usr/sbin/dhcpd -q -d --no-pid -cf /etc/dhcp/dhcpd.conf eth0
+
+[Install]
+WantedBy = multi-user.target
+

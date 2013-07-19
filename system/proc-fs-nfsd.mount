@@ -1,0 +1,9 @@
+[Unit]
+Description = nfsd filesystem
+DefaultDependencies = no
+ConditionPathExists = /proc/fs/nfsd
+
+[Mount]
+What = /proc/fs/nfsd
+Where = /proc/fs/nfsd
+Type = nfsd

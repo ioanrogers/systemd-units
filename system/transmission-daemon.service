@@ -1,0 +1,13 @@
+[Unit]
+Description = Torrent Daemon
+
+[Service]
+ExecStart = /usr/bin/transmission-daemon -f --config-dir /var/lib/transmission-daemon/info
+User = debian-transmission
+Group = media
+Restart = always
+RestartSec = 240
+
+[Install]
+WantedBy = multi-user.target
+

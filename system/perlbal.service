@@ -1,0 +1,12 @@
+[Unit]
+Description = Perl-based reverse proxy load balancer and web server
+
+[Service]
+ExecStart = /usr/bin/perlbal
+#User = www-data
+#Group = www-data
+StandardOutput = syslog
+
+[Install]
+WantedBy = multi-user.target
+

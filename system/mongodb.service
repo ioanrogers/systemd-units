@@ -1,0 +1,12 @@
+[Unit]
+Description = mongodb server
+After = local-fs.target
+
+[Service]
+ExecStart = /usr/bin/mongod --rest --config /etc/mongodb.conf run
+User = mongodb
+Group = mongodb
+
+[Install]
+WantedBy = multi-user.target
+

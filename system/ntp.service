@@ -1,0 +1,10 @@
+[Unit]
+Description = Network Time Protocol service
+
+[Service]
+ExecStart  = /usr/sbin/ntpd -g -u ntp:ntp -n 
+Restart    = always
+RestartSec = 240
+
+[Install]
+WantedBy = multi-user.target

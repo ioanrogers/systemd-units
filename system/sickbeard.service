@@ -1,0 +1,16 @@
+[Unit]
+Description = TV auto downloader
+;After = local-fs.target network.target slapd.service nslcd.service
+
+[Service]
+WorkingDirectory = /srv/www/Sick-Beard
+ExecStart = /usr/bin/python /srv/www/Sick-Beard/SickBeard.py 
+User = www-data
+Group = media
+;StandardOutput = null
+Restart = always
+RestartSec = 360
+
+[Install]
+WantedBy = multi-user.target
+

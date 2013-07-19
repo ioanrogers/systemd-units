@@ -1,0 +1,9 @@
+[Unit]
+Description = RPC pipefs
+DefaultDependencies = no
+ConditionPathExists = /var/lib/nfs/rpc_pipefs
+
+[Mount]
+What = sunrpc
+Where = /var/lib/nfs/rpc_pipefs
+Type = rpc_pipefs

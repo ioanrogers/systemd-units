@@ -1,0 +1,12 @@
+[Unit]
+Description = Listen for connection for apt-cacher
+
+[Socket]
+ListenStream = [2001:470:b:a97::1]:3142
+;ListenStream = 69.172.166.199:3142
+Accept = true
+FreeBind = true
+
+[Install]
+WantedBy = sockets.target
+

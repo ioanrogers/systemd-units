@@ -1,0 +1,10 @@
+[Unit]
+Description = NFS service
+Requires = rpcbind.service
+
+[Service]
+ExecStart = /usr/sbin/rpc.mountd -F --no-nfs-version 2 --no-nfs-version 3 --debug all
+
+[Install]
+WantedBy = multi-user.target
+

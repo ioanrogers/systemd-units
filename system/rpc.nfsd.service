@@ -1,0 +1,12 @@
+[Unit]
+Description = NFS server
+Requires = rpcbind.service
+
+[Service]
+Type = oneshot
+ExecStart = /usr/sbin/rpc.nfsd -d -N 2 -N 3 -V 4.1 -s -U 2
+ExecStop  = /usr/bin/killall -KILL nfsd
+
+[Install]
+WantedBy = multi-user.target
+

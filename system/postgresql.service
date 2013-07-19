@@ -1,0 +1,12 @@
+[Unit]
+Description = PostgreSQL RDBMS server
+
+[Service]
+ExecStart = /usr/lib/postgresql/9.1/bin/postgres -c config_file=/etc/postgresql/9.1/main/postgresql.conf
+ExecReload = /bin/kill -HUP $MAINPID
+User = postgres
+Group = postgres
+
+[Install]
+WantedBy = multi-user.target
+

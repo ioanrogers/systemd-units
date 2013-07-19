@@ -1,0 +1,11 @@
+[Unit]
+Description = uWSGI daemon 
+
+[Service]
+ExecStart = /usr/bin/uwsgi --ini /etc/uwsgi/apps-enabled/graphite.ini --plugin python
+User = _graphite
+Group = www-data
+
+[Install]
+WantedBy = multi-user.target
+

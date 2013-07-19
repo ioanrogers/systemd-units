@@ -1,0 +1,15 @@
+[Unit]
+Description = Request Tracker
+#After = slapd.service
+
+[Service]
+ExecStart = /usr/bin/plackup -s FCGI -S /run/rt4.socket /usr/share/request-tracker4/libexec/rt-server.fcgi
+User = www-data
+Group = www-data
+Environment = RT_SITE_CONFIG=/etc/request-tracker4/RT_SiteConfig.pm
+#Restart = always
+#RestartSec = 60
+
+[Install]
+WantedBy = multi-user.target
+

@@ -1,0 +1,10 @@
+[Unit]
+Description = Netfilter userspace log daemon
+
+[Service]
+ExecStart = /usr/sbin/ulogd -v
+ExecReload = /bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy = multi-user.target
+

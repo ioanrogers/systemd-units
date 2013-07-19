@@ -1,0 +1,10 @@
+[Unit]
+Description = HPA's tftp server
+Requires = tftp-hpa.socket
+
+[Service]
+ExecStart = /usr/sbin/in.tftpd -v --secure /var/lib/tftpboot
+StandardInput = socket
+User = tftp
+Group = tftp
+

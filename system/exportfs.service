@@ -1,0 +1,10 @@
+[Unit]
+Description = Export NFS
+
+[Service]
+Type = oneshot
+ExecStart = /usr/sbin/exportfs -r -v
+
+[Install]
+WantedBy = multi-user.target
+

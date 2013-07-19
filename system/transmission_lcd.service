@@ -1,0 +1,12 @@
+[Unit]
+Description = Display transmission activity on an LCD
+After = LCDd.service transmission-daemon.service
+
+[Service]
+ExecStart = /home/ioan/bin/transmission_lcd --tm_url http://localhost:9091/transmission/rpc/
+Restart = always
+RestartSec = 60
+
+[Install]
+WantedBy = multi-user.target
+
