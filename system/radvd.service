@@ -2,7 +2,7 @@
 Description = IPv6 Router Advertising Daemon
 
 [Service]
-ExecStart = /usr/sbin/radvd -u radvd -n -l stderr -u radvd
+ExecStart = /usr/sbin/radvd -u radvd -n -m stderr
 
 [Install]
 WantedBy = multi-user.target

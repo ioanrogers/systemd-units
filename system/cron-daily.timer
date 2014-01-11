@@ -1,0 +1,8 @@
+[Unit]
+Description = Daily cron job timer
+
+[Timer]
+OnCalendar = *-*-* 05:12:00
+
+[Install]
+WantedBy = multi-user.target

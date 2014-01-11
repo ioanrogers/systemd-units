@@ -1,0 +1,10 @@
+[Unit]
+Description = No Display Manager
+
+[Service]
+ExecStart = /usr/sbin/nodm --verbose --stderr
+EnvironmentFile = /etc/default/nodm
+
+[Install]
+WantedBy = multi-user.target
+

@@ -2,7 +2,7 @@
 Description = AntiSPAM software
 
 [Service]
-ExecStart  = /usr/bin/dspam --daemon --nofork
+ExecStart  = /usr/bin/dspam --daemon --nofork --debug
 User       = dspam
 Group      = dspam
 Restart    = always

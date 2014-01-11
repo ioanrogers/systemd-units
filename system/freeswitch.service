@@ -1,0 +1,22 @@
+[Unit]
+Description=freeswitch VoIP PBX
+
+[Service]
+ExecStart=/usr/bin/freeswitch -c
+Restart=always
+RestartSec = 180
+WorkingDirectory=/run/freeswitch
+User=freeswitch
+Group=freeswitch
+LimitSTACK=240
+LimitRTPRIO=infinity
+LimitRTTIME=7000000
+IOSchedulingClass=realtime
+IOSchedulingPriority=2
+CPUSchedulingPolicy=rr
+CPUSchedulingPriority=89
+UMask=0007
+
+[Install]
+WantedBy=multi-user.target
+

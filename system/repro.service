@@ -1,9 +1,8 @@
 [Unit]
 Description = SIP proxy server
-After = ifup@sit0.service
 
 [Service]
-ExecStart = /usr/sbin/repro
+ExecStart = /usr/sbin/repro /etc/repro/repro.config
 
 [Install]
 WantedBy = multi-user.target

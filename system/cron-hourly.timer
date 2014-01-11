@@ -1,0 +1,8 @@
+[Unit]
+Description = Hourly cron job timer
+
+[Timer]
+OnCalendar = hourly
+
+[Install]
+WantedBy = multi-user.target

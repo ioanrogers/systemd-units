@@ -1,0 +1,11 @@
+[Unit]
+Description = Firewall configuration
+
+[Service]
+Type = oneshot
+ExecStart = /usr/sbin/ferm /etc/ferm/ferm.conf
+RemainAfterExit = yes
+
+[Install]
+WantedBy = multi-user.target
+

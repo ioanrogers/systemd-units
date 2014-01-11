@@ -3,7 +3,7 @@ Description = RPC service
 Requires = var-lib-nfs-rpc_pipefs.mount proc-fs-nfsd.mount
 
 [Service]
-ExecStart = /sbin/rpcbind -w -d -h ::1
+ExecStart = /sbin/rpcbind -w -d -a -h 192.168.0.254 -h 2001:470:b:a97::1
 
 [Install]
 WantedBy = multi-user.target

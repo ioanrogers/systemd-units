@@ -1,0 +1,12 @@
+[Unit]
+Description = Process incoming debs
+
+[Service]
+ExecStart = /usr/bin/inoticoming --initialsearch --foreground /srv/www/apt/incoming --suffix .changes reprepro -s -b /srv/www/apt/ --waitforlock 1000 processincoming default {} \;
+
+User = ioan
+Group = www-data
+
+[Install]
+WantedBy = multi-user.target
+

@@ -1,0 +1,11 @@
+[Unit]
+Description = Runs the daily cron jobs
+
+[Service]
+WorkingDirectory = /
+ExecStart = /bin/run-parts --report /etc/cron.daily
+IOSchedulingClass = best-effort
+IOSchedulingPriority = 7
+Nice = 10
+CPUSchedulingPolicy = idle
+

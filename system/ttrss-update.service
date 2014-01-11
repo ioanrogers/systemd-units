@@ -1,0 +1,10 @@
+[Unit]
+Description = Update TT-RSS feeds
+
+[Service]
+ExecStart = /usr/share/tt-rss/www/update.php --feeds
+User = www-data
+IOSchedulingClass = best-effort
+Nice = 10
+CPUSchedulingPolicy = idle
+

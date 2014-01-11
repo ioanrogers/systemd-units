@@ -1,0 +1,8 @@
+[Unit]
+Description = Update TT-RSS feeds
+
+[Timer]
+OnCalendar =  0/3:45:00
+
+[Install]
+WantedBy = multi-user.target

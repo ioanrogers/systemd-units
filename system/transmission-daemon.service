@@ -7,6 +7,10 @@ User = debian-transmission
 Group = media
 Restart = always
 RestartSec = 240
+IOSchedulingClass = best-effort
+IOSchedulingPriority = 7
+Nice = 10
+CPUSchedulingPolicy = idle
 
 [Install]
 WantedBy = multi-user.target

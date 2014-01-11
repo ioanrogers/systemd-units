@@ -1,0 +1,9 @@
+[Unit]
+Description = Perform backups via backupninja
+
+[Service]
+ExecStart = /usr/sbin/backupninja
+IOSchedulingClass = best-effort
+Nice = 10
+CPUSchedulingPolicy = idle
+

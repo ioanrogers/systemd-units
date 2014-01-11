@@ -1,0 +1,9 @@
+[Unit]
+Description = Name Service LDAP connection daemon
+
+[Service]
+ExecStart = /usr/sbin/nslcd -n
+
+[Install]
+WantedBy = multi-user.target
+

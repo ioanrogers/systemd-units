@@ -2,7 +2,7 @@
 Description = CalDAV and CardDAV server
 
 [Service]
-ExecStart = /usr/bin/radicale -H::1:5232
+ExecStart = /usr/bin/radicale
 User = radicale
 
 [Install]

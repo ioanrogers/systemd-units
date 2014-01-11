@@ -1,6 +1,7 @@
 [Unit]
 Description = idmapper for NFS
-After = rpcbind.service 
+After = var-lib-nfs-rpc_pipefs.mount rpc.nfsd.service
+Requires = var-lib-nfs-rpc_pipefs.mount
 
 [Service]
 ExecStart = /usr/sbin/rpc.idmapd -f -vvv
